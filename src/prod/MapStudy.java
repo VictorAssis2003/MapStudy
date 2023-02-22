@@ -28,7 +28,7 @@ public class MapStudy {
 
 				if (candidato.containsKey(name)) {
 					int votesTot = candidato.get(name);
-					candidato.put(name, votes);
+					candidato.put(name, votes + votesTot);
 
 				} else {
 					candidato.put(name, votes);
@@ -38,13 +38,12 @@ public class MapStudy {
 			}
 			for (String key : candidato.keySet()) {
 				System.out.println(key + ": " + candidato.get(key));
-				
+
 			}
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 
 	}
 
